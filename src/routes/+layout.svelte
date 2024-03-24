@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+
+	console.log($page)
 </script>
 
 <svelte:head>
@@ -60,15 +62,7 @@
 			</li>
 			<li id="menu">
 				<div>
-					{#if !$page.data.user}
-						<a href="/login">ログイン</a>
-						<p>/</p>
-						<a href="/register">新規登録</a>
-					{:else}
-						<form action="/logout?/logout" method="POST">
-							<button>ログアウト</button>
-						</form>
-					{/if}
+					
 				</div>
 				<label for="checkbox"><span class="material-symbols-outlined"> menu </span></label>
 			</li>
@@ -76,6 +70,18 @@
 	</nav>
 </header>
 <main>
+	{#if !$page.data.user}
+						<a href="/login">ログイン</a>
+						<p>/</p>
+						<a href="/register">新規登録</a>
+						<form action="/logout?/logout" method="POST">
+							<button>ログアウト</button>
+						</form>
+					{:else}
+						<form action="/logout?/logout" method="POST">
+							<button>ログアウト</button>
+						</form>
+					{/if}
 	<slot />
 </main>
 
