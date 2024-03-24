@@ -179,4 +179,8 @@
 			}
 		}
 	}
+
+	main {
+		margin-left: 80px;
+	}
 </style>
