@@ -7,6 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap"
+		rel="stylesheet"
+	/>
 	<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -74,6 +80,11 @@
 </main>
 
 <style lang="scss">
+	:global(body) {
+		font-family: 'M PLUS 1p', sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	}
 	header {
 		z-index: 999;
 		width: 300px;
