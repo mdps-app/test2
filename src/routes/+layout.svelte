@@ -3,12 +3,12 @@
 </script>
 
 {#if !$page.data.user}
+	<a href="/login">ログイン</a>
+	<a href="/register">新規登録</a>
+{:else}
 	<form action="/logout?/logout" method="POST">
 		<button>ログアウト</button>
 	</form>
-{:else}
-	<a href="/login">ログイン</a>
-	<a href="/register">新規登録</a>
 {/if}
 
 <slot />
