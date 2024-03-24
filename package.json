@@ -11,7 +11,6 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"deploy": "npm run build && gh-pages -d mainHp -b deploy-240324"
-
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -37,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "^5.11.0",
+		"@supabase/supabase-js": "^2.39.8",
 		"bcrypt": "^5.1.1"
 	}
 }
