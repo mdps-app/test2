@@ -25,6 +25,7 @@
 	/>
 </svelte:head>
 
+<input id="checkbox" type="checkbox" />
 <header>
 	<div>
 		<p>備品管理システム</p>
@@ -59,7 +60,7 @@
 						</form>
 					{/if}
 				</div>
-				<span class="material-symbols-outlined"> menu </span>
+				<label for="checkbox"><span class="material-symbols-outlined"> menu </span></label>
 			</li>
 		</ul>
 	</nav>
@@ -150,11 +151,31 @@
 					}
 				}
 
+				label {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
 				span {
 					grid-column: 2 / 3;
-
 					cursor: pointer;
 				}
+			}
+		}
+	}
+
+	header {
+		transform: translateX(-220px);
+		transition: all 300ms 0s ease;
+	}
+
+	input[type='checkbox'] {
+		display: none;
+
+		&:checked {
+			~ header {
+				transform: translateX(0px);
 			}
 		}
 	}
